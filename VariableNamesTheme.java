@@ -27,7 +27,7 @@ public class VariableNamesTheme {
         System.out.println("Процент по вкладу = " + investPercent);
         // Переменная хранит символ &
         char iSymbol = '&';
-        System.out.println("Переменная хранит символ & = " + iSymbol);
+        System.out.println("Переменная хранит символ = " + iSymbol);
         // Код ошибки
         int codeError = 404;
         System.out.println("Код ошибки = " + codeError);
@@ -35,20 +35,50 @@ public class VariableNamesTheme {
         String messageType = "Тип сообщения";
         System.out.println("Тип сообщения = " + messageType);
         // Число нулей
+        int countOfZeroes = 10;
+        System.out.println("Число нулей = " + countOfZeroes);
         // Уникальное число
+        int unicNumber = 7;
+        System.out.println("Уникальное число = " + unicNumber);
         // Случайное число
+        int randomNumber = 8;
+        System.out.println("Случайное число = " + randomNumber);
         // Математическое выражение
+        int mathExpression = 5 + 5;
+        System.out.println("Математическое выражение = " + mathExpression);
         // Счет в игре
+        double gameScore = 2.0;
+        System.out.println("Счет в игре " + gameScore);
         // Максимальная длина
+        int maxLength = 100;
+        System.out.println("Максимальная длина = " + maxLength);
         // Пункт меню
+        String menuPosition = "Coffee";
+        System.out.println("Пункт меню = " + menuPosition);
         // Стоимость кофе
+        double coffeeCost = 104.0;
+        System.out.println("Стоимость кофе = " + coffeeCost);
         // Дата начала
+        String startTime = "2024-20-10";
+        System.out.println("Дата начала = " + startTime);
         // Окончание диапазона
+        String endOfRange = "2024 год";
+        System.out.println("Окончание диапазона" + endOfRange);
         // Полное имя работника месяца
+        String fullEmployeeOfTheMounthName = "Чарл Чаплин";
+        System.out.println("Полное имя работника месяца = " + fullEmployeeOfTheMounthName);
         // Заголовок электронной книги
+        String eBookTitle = "Микросервисная архитектура";
+        System.out.println("Заголовок электронной книги = " + eBookTitle);
         // Размер
+        int size = 52;
+        System.out.println("Размер = " + size);
         // Счетчик
+        int counter = 10;
+        System.out.println("Счетчик = " + counter);
         // Путь до файла
+        String pathToFile = "C:/Work/JavaStart/Lesson_1/VariableNamesTheme.java";
+        System.out.println("Путь до файла = " + pathToFile);
         // Количество чисел в каждой строке
         int countNumbersInEveryString = 5;
         System.out.println("Количество чисел в каждой строке = " + countNumbersInEveryString + "\n");
