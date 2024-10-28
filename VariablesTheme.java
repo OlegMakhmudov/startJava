@@ -2,38 +2,42 @@ public class VariablesTheme {
     public static void main(String[] args) {
         System.out.println("1. Вывод характеристик компьютера\n");
 
-        byte ram = 16;
-        System.out.println("Оперативная память: " + ram + " ГБ");
+        byte ramMemory = 16;
+        System.out.println("Объем оперативной памяти: " + ramMemory + " ГБ");
 
         short motherboardCount = 1;
         System.out.println("Материнская плата: " + motherboardCount + " шт.");
 
-        int hardDrive = 512;
-        System.out.println("Жесткий диск: " + hardDrive + " ГБ");
+        int hardDriveMemory = 512;
+        System.out.println("Объем жесткого диска: " + hardDriveMemory + " ГБ");
 
-        long videoCard = 8;
-        System.out.println("Видеокарта: " + videoCard + " ГБ");
+        long videoCardMemory = 8;
+        System.out.println("Объем видеокарты: " + videoCardMemory + " ГБ");
 
         float cpu = 9950f;
-        System.out.println("Процессор: " + cpu);
+        System.out.println("Вид процессора: " + cpu);
 
         double computerWeight = 4.5;
         System.out.println("Вес компьютера: " + computerWeight + " кг");
 
         boolean isComputerOn = false;
-        System.out.println("Компьютер включен: " + isComputerOn + "\n");
+        System.out.println("Компьютер включен: " + isComputerOn);
+
+        char energyClass = 'A';
+        System.out.println("Энергетический класс компьютера: " + energyClass + "\n");
+
 
         System.out.println("2. Расчет стоимости товара со скидкой\n");
 
         float penCost = 105.5f;
         float bookCost = 235.83f;
 
-        float commonCost = penCost + bookCost;
-        float discountSum = commonCost * 0.11f;
-        float finalCost = commonCost - discountSum;
-        System.out.println("Стоимость товаров без скидки = " + commonCost + " руб.");
+        float baseCost = penCost + bookCost;
+        float discountSum = baseCost * 0.11f;
+        float discountCost = baseCost - discountSum;
+        System.out.println("Стоимость товаров без скидки = " + baseCost + " руб.");
         System.out.println("Сумма скидки = " + discountSum + " руб.");
-        System.out.println("Сумма товаров со скидкой = " + finalCost + " руб." + "\n");
+        System.out.println("Сумма товаров со скидкой = " + discountCost + " руб." + "\n");
 
         System.out.println("3. Вывод слова JAVA\n");
 
@@ -48,35 +52,32 @@ public class VariablesTheme {
         short maxShort = 32767;
         int maxInt = 2147483647;
         long maxLong = 9223372036854775807L;
+        char maxChar = 255;
 
-        System.out.println("Значения для byte");
-
+        System.out.println("Значения для byte:");
         System.out.println("Первоначальное значение: " + maxByte);
-        maxByte++;
-        System.out.println("Значение после инкремента: " + maxByte);
-        maxByte--;
-        System.out.println("Значение после декремента: " + maxByte + "\n");
+        System.out.println("Значение после инкремента: " + ++maxByte);
+        System.out.println("Значение после декремента: " + --maxByte + "\n");
 
-        System.out.println("Значения для short");
+        System.out.println("Значения для short:");
         System.out.println("Первоначальное значение: " + maxShort);
-        maxShort++;
-        System.out.println("Значение после инкремента: " + maxShort);
-        maxShort--;
-        System.out.println("Значение после декремента: " + maxShort + "\n");
+        System.out.println("Значение после инкремента: " + ++maxShort);
+        System.out.println("Значение после декремента: " + --maxShort + "\n");
 
-        System.out.println("Значения для int");
+        System.out.println("Значения для int:");
         System.out.println("Первоначальное значение: " + maxInt);
-        maxInt++;
-        System.out.println("Значение после инкремента: " + maxInt);
-        maxInt--;
-        System.out.println("Значение после декремента: " + maxInt + "\n");
+        System.out.println("Значение после инкремента: " + ++maxInt);
+        System.out.println("Значение после декремента: " + --maxInt + "\n");
 
-        System.out.println("Значения для long");
+        System.out.println("Значения для long:");
         System.out.println("Первоначальное значение: " + maxLong);
-        maxLong++;
-        System.out.println("Значение после инкремента: " + maxLong);
-        maxLong--;
-        System.out.println("Значение после декремента: " + maxLong + "\n");
+        System.out.println("Значение после инкремента: " + ++maxLong);
+        System.out.println("Значение после декремента: " + --maxLong + "\n");
+
+        System.out.println("Значения для char:");
+        System.out.println("Первоначальное значение: " + maxChar);
+        System.out.println("Значение после инкремента: " + ++maxChar);
+        System.out.println("Значение после декремента: " + --maxChar + "\n");
 
         System.out.println("5. Перестановка значений переменных\n");
 
@@ -106,11 +107,11 @@ public class VariablesTheme {
 
         System.out.println("6. Вывод символов и их кодов\n");
 
-        char dollar = '$';
-        char star = '*';
-        char atSign = '@';
-        char pipe = '|';
-        char tilda = '~';
+        char dollar = 36;
+        char star = 42;
+        char atSign = 64;
+        char pipe = 124;
+        char tilda = 126;
         System.out.println("36 = " + dollar + "\n" +
                 "42 = " + star + "\n" +
                 "64 = " + atSign + "\n" +
@@ -121,12 +122,12 @@ public class VariablesTheme {
         char slash = '/';
         char backslash = '\\';
         char underscore = '_';
-        char openParen = '(';
-        char closeParen = ')';
-        System.out.println(" " + " " + " " + " " + " " + slash + backslash + "\n" +
-                " " + " " + " " + " " + slash + " " + " " + backslash + "\n" +
-                " " + " " + " " + slash + underscore + openParen + " " + closeParen + backslash + "\n" +
-                " " + " " + slash + " " + " " + " " + " " + " " + " " + backslash + "\n" +
+        char openBracket = '(';
+        char closeBracket = ')';
+        System.out.println("     " + slash + backslash + "\n" +
+                "    " + slash + "  " + backslash + "\n" +
+                "   " + slash + underscore + openBracket + " " + closeBracket + backslash + "\n" +
+                "  " + slash + "      " + backslash + "\n" +
                 " " + slash + underscore + underscore + underscore + underscore + slash + backslash + underscore + underscore + backslash + "\n"
         );
 
@@ -148,16 +149,14 @@ public class VariablesTheme {
                 "Произведение разрядов = " + multiplication + "\n");
 
         System.out.println("9. Перевод секунд в часы, минуты и секунды\n");
-        int seconds = 86399;
+        int ssTotal = 86399;
 
-        int hours = seconds / 3600;
-        int remainingSeconds = seconds % 3600;
-        int minutes = remainingSeconds / 60;
-        int sec = remainingSeconds % 60;
+        int hh = ssTotal / 3600;
+        int remainingSeconds = ssTotal % 3600;
+        int mm = remainingSeconds / 60;
+        int ss = remainingSeconds % 60;
 
-        System.out.println(hours + ":" + minutes + ":" + sec + "\n");
-
-
+        System.out.println(hh + ":" + mm + ":" + ss + "\n");
     }
 
 }
