@@ -51,8 +51,8 @@ public class VariableNamesTheme {
         System.out.println("Число нулей = " + countOfZeroes);
 
         // Уникальное число
-        int unique = 7;
-        System.out.println("Уникальное число = " + unique);
+        int uniqueNumber = 7;
+        System.out.println("Уникальное число = " + uniqueNumber);
 
         // Случайное число
         int randomNumber = 8;
@@ -71,8 +71,8 @@ public class VariableNamesTheme {
         System.out.println("Максимальная длина = " + maxLength);
 
         // Пункт меню
-        String menuPosition = "Coffee";
-        System.out.println("Пункт меню = " + menuPosition);
+        String menuItem = "Coffee";
+        System.out.println("Пункт меню = " + menuItem);
 
         // Стоимость кофе
         double coffeeCost = 104.0;
@@ -87,8 +87,8 @@ public class VariableNamesTheme {
         System.out.println("Окончание диапазона" + endOfRange);
 
         // Полное имя работника месяца
-        String fullEmployeeName = "Чарл Чаплин";
-        System.out.println("Полное имя работника месяца = " + fullEmployeeName);
+        String fullNameEmployeeOfMonth = "Чарл Чаплин";
+        System.out.println("Полное имя работника месяца = " + fullNameEmployeeOfMonth);
 
         // Заголовок электронной книги
         String ebookTitle = "Микросервисная архитектура";
@@ -151,32 +151,32 @@ public class VariableNamesTheme {
         System.out.println("3. Аббревиатуры\n");
 
         // старый universally unique identifier
-        String UUID = "старый universally unique identifier";
-        System.out.println("UUID: " + UUID);
+        String oldUuid = "старый universally unique identifier";
+        System.out.println("oldUuid: " + oldUuid);
 
         // производитель оперативной памяти
-        String RAM = "производитель оперативной памяти";
-        System.out.println("RAM: " + RAM);
+        String ramProducer = "производитель оперативной памяти";
+        System.out.println("ramProducer: " + ramProducer);
 
         // емкость жесткого диска
-        String HDD = "емкость жесткого диска";
-        System.out.println("HDD: " + HDD);
+        String hddVolume = "емкость жесткого диска";
+        System.out.println("hddVolume: " + hddVolume);
 
         // протокол передачи гипертекста
-        String HTTP = "протокол передачи гипертекста";
-        System.out.println("HTTP: " + HTTP);
+        String http = "протокол передачи гипертекста";
+        System.out.println("http: " + http);
 
         // сокращенный uniform resource locator
-        String URL = "сокращенный uniform resource locator";
-        System.out.println("URL: " + URL);
+        String shortcutUrl = "сокращенный uniform resource locator";
+        System.out.println("shortcutUrl: " + shortcutUrl);
 
         // новый идентификатор клиента
-        String CID = "новый идентификатор клиента";
-        System.out.println("CID: " + CID);
+        String newCid = "новый идентификатор клиента";
+        System.out.println("newCid: " + newCid);
 
         // american standard code for information interchange
-        String ASCII = "american standard code for information interchange";
-        System.out.println("ASCII: " + ASCII);
-    }
+        String ascii = "american standard code for information interchange";
+        System.out.println("ascii: " + ascii);
 
+    }
 }

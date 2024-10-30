@@ -2,20 +2,20 @@ public class VariablesTheme {
     public static void main(String[] args) {
         System.out.println("1. Вывод характеристик компьютера\n");
 
-        byte ramMemory = 16;
-        System.out.println("Объем оперативной памяти: " + ramMemory + " ГБ");
+        byte ramValue = 16;
+        System.out.println("Объем оперативной памяти: " + ramValue + " ГБ");
 
         short motherboardCount = 1;
         System.out.println("Материнская плата: " + motherboardCount + " шт.");
 
-        int hardDriveMemory = 512;
-        System.out.println("Объем жесткого диска: " + hardDriveMemory + " ГБ");
+        int hddValue = 512;
+        System.out.println("Объем жесткого диска: " + hddValue + " ГБ");
 
-        long videoCardMemory = 8;
-        System.out.println("Объем видеокарты: " + videoCardMemory + " ГБ");
+        long vram = 8;
+        System.out.println("Объем видеокарты: " + vram + " ГБ");
 
-        float cpu = 9950f;
-        System.out.println("Вид процессора: " + cpu);
+        float cpuType = 9950f;
+        System.out.println("Вид процессора: " + cpuType);
 
         double computerWeight = 4.5;
         System.out.println("Вес компьютера: " + computerWeight + " кг");
@@ -25,7 +25,6 @@ public class VariablesTheme {
 
         char energyClass = 'A';
         System.out.println("Энергетический класс компьютера: " + energyClass + "\n");
-
 
         System.out.println("2. Расчет стоимости товара со скидкой\n");
 
@@ -49,35 +48,34 @@ public class VariablesTheme {
         System.out.println("4. Вывод min и max значений целых числовых типов\n");
 
         byte maxByte = 127;
-        short maxShort = 32767;
-        int maxInt = 2147483647;
-        long maxLong = 9223372036854775807L;
-        char maxChar = 255;
-
         System.out.println("Значения для byte:");
         System.out.println("Первоначальное значение: " + maxByte);
         System.out.println("Значение после инкремента: " + ++maxByte);
         System.out.println("Значение после декремента: " + --maxByte + "\n");
 
+        short maxShort = 32767;
         System.out.println("Значения для short:");
         System.out.println("Первоначальное значение: " + maxShort);
         System.out.println("Значение после инкремента: " + ++maxShort);
         System.out.println("Значение после декремента: " + --maxShort + "\n");
 
+        int maxInt = 2147483647;
         System.out.println("Значения для int:");
         System.out.println("Первоначальное значение: " + maxInt);
         System.out.println("Значение после инкремента: " + ++maxInt);
         System.out.println("Значение после декремента: " + --maxInt + "\n");
 
+        long maxLong = 9223372036854775807L;
         System.out.println("Значения для long:");
         System.out.println("Первоначальное значение: " + maxLong);
         System.out.println("Значение после инкремента: " + ++maxLong);
         System.out.println("Значение после декремента: " + --maxLong + "\n");
 
+        char maxChar = 255;
         System.out.println("Значения для char:");
-        System.out.println("Первоначальное значение: " + maxChar);
-        System.out.println("Значение после инкремента: " + ++maxChar);
-        System.out.println("Значение после декремента: " + --maxChar + "\n");
+        System.out.println("Первоначальное значение: " + (int) maxChar);
+        System.out.println("Значение после инкремента: " + ((int) ++maxChar));
+        System.out.println("Значение после декремента: " + ((int) --maxChar) + "\n");
 
         System.out.println("5. Перестановка значений переменных\n");
 
@@ -107,16 +105,16 @@ public class VariablesTheme {
 
         System.out.println("6. Вывод символов и их кодов\n");
 
-        char dollar = 36;
-        char star = 42;
-        char atSign = 64;
-        char pipe = 124;
-        char tilda = 126;
-        System.out.println("36 = " + dollar + "\n" +
-                "42 = " + star + "\n" +
-                "64 = " + atSign + "\n" +
-                "124 = " + pipe + "\n" +
-                "126 = " + tilda + "\n");
+        char dollar = '$';
+        char star = '*';
+        char atSign = '@';
+        char pipe = '|';
+        char tilda = '~';
+        System.out.println((int) dollar + " = " + dollar + "\n" +
+                (int) star + " = " + star + "\n" +
+                (int) atSign + " = " + atSign + "\n" +
+                (int) pipe + " = " + pipe + "\n" +
+                (int) tilda + " = " + tilda + "\n");
 
         System.out.println("7. Вывод в консоль ASCII-арт Дюка\n");
         char slash = '/';
@@ -135,9 +133,8 @@ public class VariablesTheme {
         int number = 123;
 
         int hundreds = number / 100;
-        int remaining = number % 100;
-        int tens = remaining / 10;
-        int ones = remaining % 10;
+        int tens = number / 10 % 10;
+        int ones = number % 10;
 
         int sum = hundreds + tens + ones;
         int multiplication = hundreds * tens * ones;
@@ -152,11 +149,9 @@ public class VariablesTheme {
         int ssTotal = 86399;
 
         int hh = ssTotal / 3600;
-        int remainingSeconds = ssTotal % 3600;
-        int mm = remainingSeconds / 60;
-        int ss = remainingSeconds % 60;
+        int mm = ssTotal / 60 % 60;
+        int ss = ssTotal % 60;
 
         System.out.println(hh + ":" + mm + ":" + ss + "\n");
     }
-
 }

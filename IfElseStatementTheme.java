@@ -40,18 +40,28 @@ public class IfElseStatementTheme {
         }
 
         System.out.println("3. Проверка числа\n");
-        int number = -5;
-        if (number % 2 == 0 && number < 0) {
-            System.out.println(number + " " + "является отрицательным и четным");
-        } else if (number % 2 != 0 && number > 0) {
-            System.out.println(number + " " + "является положительным и нечетным");
-        } else if (number % 2 != 0 && number < 0) {
-            System.out.println(number + " " + "является отрицатеьным и нечетным");
-        } else if (number % 2 == 0 && number > 0) {
-            System.out.println(number + " " + "является положительным и четным");
-        } else if (number == 0) {
-            System.out.println("Число является нулем");
+        int number = 0;
+
+        if (number == 0) {
+            System.out.println("Число равно нулю");
+            return;
         }
+
+        String positiveOrNegativeNumber;
+        if (number > 0) {
+            positiveOrNegativeNumber = "положительным";
+        } else {
+            positiveOrNegativeNumber = "отрицательным";
+        }
+
+        String evenOrOddNumber;
+        if (number % 2 == 0) {
+            evenOrOddNumber = "четным";
+        } else {
+            evenOrOddNumber = "нечетным";
+        }
+
+        System.out.printf("%d является %s и %s\n", number, positiveOrNegativeNumber, evenOrOddNumber + "\n");
 
         System.out.println("4. Поиск одинаковых цифр в числах\n");
         int number1 = 345;
@@ -84,70 +94,47 @@ public class IfElseStatementTheme {
 
         System.out.println("5. Определение символа по его коду\n");
         char code = '\u0031';
-        if (code >= 'a' && code <= 'z') {
+
+        if ((code >= 'a' && code <= 'z')) {
             System.out.println("'" + code + "' - маленькая буква\n");
-        } else if (code >= 'A' && code <= 'Z') {
+        } else if ((code >= 'A' && code <= 'Z')) {
             System.out.println("'" + code + "' - большая буква\n");
+        } else if ((code >= '0' && code <= '9')) {
+            System.out.println("'" + code + "' - цифра\n");
         } else {
-            if (code >= '0' && code <= '9') {
-                System.out.println("'" + code + "' - цифра\n");
-            } else {
-                if (code == 'W') {
-                    System.out.println("'" + code + "' - большая буква\n");
-                } else {
-                    System.out.println("'" + code + "' - ни буква, ни цифра\n");
-                }
-            }
+            System.out.println("'" + code + "' - ни буква, ни цифра\n");
         }
 
         System.out.println("6. Подсчет начисленных банком %\n");
         double deposit = 321123.59;
         System.out.println("Сумма вклада: " + deposit + " руб.");
+
+        double interestRate;
+
         if (deposit < 100000) {
-            double accuredPaymentAmount = deposit * 0.05;
-            System.out.println("Сумма начисленного %: " + accuredPaymentAmount + " руб.");
-            double finalDeposit = deposit + accuredPaymentAmount;
-            System.out.println("Итоговая сумма с %: " + finalDeposit + " руб.\n");
+            interestRate = 0.05;
         } else if (deposit >= 100000 && deposit <= 300000) {
-            double accuredPaymentAmount = deposit * 0.07;
-            System.out.println("Сумма начисленного %: " + accuredPaymentAmount + " руб.");
-            double finalDeposit = deposit + accuredPaymentAmount;
-            System.out.println("Итоговая сумма с %: " + finalDeposit + " руб.\n");
-        } else if (deposit > 300000) {
-            double accuredPaymentAmount = deposit * 0.1;
-            System.out.println("Сумма начисленного %: " + accuredPaymentAmount + " руб.");
-            double finalDeposit = deposit + accuredPaymentAmount;
-            System.out.println("Итоговая сумма с %: " + finalDeposit + " руб.\n");
+            interestRate = 0.07;
+        } else {
+            interestRate = 0.1;
         }
+
+        double accuredPaymentAmount = deposit * interestRate;
+        double finalDeposit = deposit + accuredPaymentAmount;
+
+        System.out.println("Сумма начисленного %: " + accuredPaymentAmount + " руб.");
+        System.out.println("Итоговая сумма с %: " + finalDeposit + " руб.\n");
 
         System.out.println("7. Определение оценки по предметам\n");
         int historyPercent = 59;
         int programmingPercent = 92;
 
-        int historyGrade;
-        if (historyPercent <= 60) {
-            historyGrade = 2;
-        } else if (historyPercent <= 73) {
-            historyGrade = 3;
-        } else if (historyPercent <= 91) {
-            historyGrade = 4;
-        } else {
-            historyGrade = 5;
-        }
+        double averagePercent = (historyPercent + programmingPercent) / 2.0;
 
-        int programmingGrade;
-        if (programmingPercent <= 60) {
-            programmingGrade = 2;
-        } else if (programmingPercent <= 73) {
-            programmingGrade = 3;
-        } else if (programmingPercent <= 91) {
-            programmingGrade = 4;
-        } else {
-            programmingGrade = 5;
-        }
+        int historyGrade = (historyPercent > 91) ? 5 : (historyPercent > 73) ? 4 : (historyPercent > 60) ? 3 : 2;
+        int programmingGrade = (programmingPercent > 91) ? 5 : (programmingPercent > 73) ? 4 : (programmingPercent > 60) ? 3 : 2;
 
         double averageGrade = (historyGrade + programmingGrade) / 2.0;
-        double averagePercent = (historyPercent + programmingPercent) / 2.0;
 
         System.out.println("Оценки по предметам: ");
         System.out.println("История: " + historyGrade);
@@ -163,6 +150,7 @@ public class IfElseStatementTheme {
         double productionCostPerMonth = 9001.729;
 
         double profitPerMonth = salesPerMonth - (rentPerMonth + productionCostPerMonth);
+
         double annualProfit = profitPerMonth * 12;
 
         // Форматированный вывод результата
