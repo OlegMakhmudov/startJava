@@ -167,8 +167,8 @@ public class VariableNamesTheme {
         System.out.println("http: " + http);
 
         // сокращенный uniform resource locator
-        String shortcutUrl = "сокращенный uniform resource locator";
-        System.out.println("shortcutUrl: " + shortcutUrl);
+        String shortUrl = "сокращенный uniform resource locator";
+        System.out.println("shortUrl: " + shortUrl);
 
         // новый идентификатор клиента
         String newCid = "новый идентификатор клиента";
@@ -177,6 +177,5 @@ public class VariableNamesTheme {
         // american standard code for information interchange
         String ascii = "american standard code for information interchange";
         System.out.println("ascii: " + ascii);
-
     }
 }

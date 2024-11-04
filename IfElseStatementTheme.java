@@ -40,28 +40,27 @@ public class IfElseStatementTheme {
         }
 
         System.out.println("3. Проверка числа\n");
-        int number = 0;
+        int number = 10;
 
         if (number == 0) {
-            System.out.println("Число равно нулю");
-            return;
-        }
-
-        String positiveOrNegativeNumber;
-        if (number > 0) {
-            positiveOrNegativeNumber = "положительным";
+            System.out.println("Число равно нулю\n");
         } else {
-            positiveOrNegativeNumber = "отрицательным";
-        }
+            String positiveOrNegativeNumber;
+            if (number > 0) {
+                positiveOrNegativeNumber = "положительным";
+            } else {
+                positiveOrNegativeNumber = "отрицательным";
+            }
 
-        String evenOrOddNumber;
-        if (number % 2 == 0) {
-            evenOrOddNumber = "четным";
-        } else {
-            evenOrOddNumber = "нечетным";
-        }
+            String evenOrOddNumber;
+            if (number % 2 == 0) {
+                evenOrOddNumber = "четным";
+            } else {
+                evenOrOddNumber = "нечетным";
+            }
 
-        System.out.printf("%d является %s и %s\n", number, positiveOrNegativeNumber, evenOrOddNumber + "\n");
+            System.out.printf("%d является %s и %s\n", number, positiveOrNegativeNumber, evenOrOddNumber + "\n");
+        }
 
         System.out.println("4. Поиск одинаковых цифр в числах\n");
         int number1 = 345;
@@ -109,32 +108,44 @@ public class IfElseStatementTheme {
         double deposit = 321123.59;
         System.out.println("Сумма вклада: " + deposit + " руб.");
 
-        double interestRate;
-
-        if (deposit < 100000) {
-            interestRate = 0.05;
-        } else if (deposit >= 100000 && deposit <= 300000) {
+        double interestRate = 0.05;
+        
+        if (deposit >= 100000 && deposit <= 300000) {
             interestRate = 0.07;
         } else {
             interestRate = 0.1;
         }
 
-        double accuredPaymentAmount = deposit * interestRate;
-        double finalDeposit = deposit + accuredPaymentAmount;
+        double acccuredInterest = deposit * interestRate;
+        double finalDeposit = deposit + acccuredInterest;
 
-        System.out.println("Сумма начисленного %: " + accuredPaymentAmount + " руб.");
+        System.out.println("Сумма начисленного %: " + acccuredInterest + " руб.");
         System.out.println("Итоговая сумма с %: " + finalDeposit + " руб.\n");
 
         System.out.println("7. Определение оценки по предметам\n");
         int historyPercent = 59;
         int programmingPercent = 92;
+        
+        int historyGrade = 2;
+        if (historyPercent > 60 && historyPercent <= 73) {
+            historyGrade = 3;
+        } else if (historyPercent > 73 && historyPercent <= 91) {
+            historyGrade = 4;
+        } else if (historyPercent > 91) {
+            historyGrade = 5;
+        }
 
-        double averagePercent = (historyPercent + programmingPercent) / 2.0;
+        int programmingGrade = 2;
+        if (programmingPercent > 60 && programmingPercent <= 73) {
+            programmingGrade = 3;
+        } else if (programmingPercent > 73 && programmingPercent <= 91) {
+            programmingGrade = 4;
+        } else if (programmingPercent > 91) {
+            programmingGrade = 5;
+        }
 
-        int historyGrade = (historyPercent > 91) ? 5 : (historyPercent > 73) ? 4 : (historyPercent > 60) ? 3 : 2;
-        int programmingGrade = (programmingPercent > 91) ? 5 : (programmingPercent > 73) ? 4 : (programmingPercent > 60) ? 3 : 2;
-
-        double averageGrade = (historyGrade + programmingGrade) / 2.0;
+        float averagePercent = (historyPercent + programmingPercent) / 2.0f;
+        float averageGrade = (historyGrade + programmingGrade) / 2.0f;
 
         System.out.println("Оценки по предметам: ");
         System.out.println("История: " + historyGrade);
@@ -142,20 +153,16 @@ public class IfElseStatementTheme {
         System.out.println("Средний балл: " + averageGrade);
         System.out.println("Средний %: " + averagePercent + "\n");
 
-
         System.out.println("8. Расчет годовой прибыли\n");
-
         double salesPerMonth = 35000.233;
         double rentPerMonth = 5123.018;
         double productionCostPerMonth = 9001.729;
 
         double profitPerMonth = salesPerMonth - (rentPerMonth + productionCostPerMonth);
-
         double annualProfit = profitPerMonth * 12;
-
-        // Форматированный вывод результата
+        
         String profitSign = annualProfit >= 0 ? "+" : "";
         System.out.printf("Прибыль за год: %s%.2f руб.%n", profitSign, annualProfit);
     }
-
 }
+
